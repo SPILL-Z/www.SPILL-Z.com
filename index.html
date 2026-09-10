@@ -34,40 +34,16 @@
         </div>
     </header>
 
-    <!-- Main Navigation Bar (5 Categories) -->
-    <nav class="bg-[#1f1f1f] border-b border-gray-800 shadow-lg sticky top-0 z-50">
+    <!-- Main Navigation Bar -->
+    <nav class="bg-[#1f1f1f] border-b border-gray-800 shadow-lg sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4">
             <ul class="flex flex-wrap justify-center font-semibold text-xs md:text-sm text-gray-300 uppercase tracking-wide">
-                <li>
-                    <button onclick="filterNews('ALL')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Home
-                    </button>
-                </li>
-                <li>
-                    <button onclick="filterNews('Social & Lifestyle')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Social & Lifestyle
-                    </button>
-                </li>
-                <li>
-                    <button onclick="filterNews('Health & Wellness')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Health & Wellness
-                    </button>
-                </li>
-                <li>
-                    <button onclick="filterNews('Entertainment')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Entertainment
-                    </button>
-                </li>
-                <li>
-                    <button onclick="filterNews('Education')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Education
-                    </button>
-                </li>
-                <li>
-                    <button onclick="filterNews('Technology')" class="px-4 py-3.5 border-b-2 border-transparent hover:border-amber-400 hover:text-amber-400 transition">
-                        Technology
-                    </button>
-                </li>
+                <li><button onclick="filterNews('ALL')" class="px-4 py-3.5 hover:text-amber-400 transition">Home</button></li>
+                <li><button onclick="filterNews('Social & Lifestyle')" class="px-4 py-3.5 hover:text-amber-400 transition">Social & Lifestyle</button></li>
+                <li><button onclick="filterNews('Health & Wellness')" class="px-4 py-3.5 hover:text-amber-400 transition">Health & Wellness</button></li>
+                <li><button onclick="filterNews('Entertainment')" class="px-4 py-3.5 hover:text-amber-400 transition">Entertainment</button></li>
+                <li><button onclick="filterNews('Education')" class="px-4 py-3.5 hover:text-amber-400 transition">Education</button></li>
+                <li><button onclick="filterNews('Technology')" class="px-4 py-3.5 hover:text-amber-400 transition">Technology</button></li>
             </ul>
         </div>
     </nav>
@@ -81,36 +57,45 @@
             <input type="text" id="searchInput" onkeyup="searchNews()" placeholder="Search news..." class="px-3 py-1.5 text-sm bg-[#181818] border border-gray-700 rounded text-gray-200 focus:outline-none focus:border-amber-400 w-full md:w-64">
         </div>
 
-        <!-- Layout: Main News + Most Viewed Sidebar -->
+        <!-- Layout Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- News Grid (Left 2 Columns) -->
             <div class="lg:col-span-2 space-y-8" id="news-container">
                 <!-- Data populated by JS -->
             </div>
 
-            <!-- Sidebar (Right Column) -->
+            <!-- Sidebar -->
             <aside class="space-y-6 border-t lg:border-t-0 lg:border-l border-gray-800 pt-6 lg:pt-0 lg:pl-6">
                 <div class="bg-[#181818] p-5 rounded border border-gray-800">
                     <h3 class="serif-title font-bold text-lg text-amber-400 border-b border-gray-800 pb-2 mb-4">MOST VIEWED</h3>
                     <ol class="space-y-4 text-sm font-medium text-gray-300 list-decimal list-inside">
-                        <li class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">Global trends shifting towards AI-driven daily workflows</li>
-                        <li class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">New health guidelines released for hybrid workers</li>
-                        <li class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">Education sector adopts modern digital frameworks</li>
-                        <li class="hover:text-amber-400 cursor-pointer transition">Weekend lifestyle: Top urban retreats to visit</li>
+                        <li onclick="openNewsModal(1)" class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">Global trends shifting towards AI-driven daily workflows</li>
+                        <li onclick="openNewsModal(3)" class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">New health guidelines released for hybrid workers</li>
+                        <li onclick="openNewsModal(5)" class="pb-2 border-b border-gray-800 hover:text-amber-400 cursor-pointer transition">Education sector adopts modern digital frameworks</li>
+                        <li onclick="openNewsModal(2)" class="hover:text-amber-400 cursor-pointer transition">Weekend lifestyle: Top urban retreats to visit</li>
                     </ol>
                 </div>
             </aside>
-
         </div>
     </main>
+
+    <!-- Modal อ่านข่าวฉบับเต็ม (Full Article Modal) -->
+    <div id="newsModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-[#181818] border border-gray-700 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative text-gray-200 shadow-2xl">
+            <!-- ปุ่มปิด X -->
+            <button onclick="closeNewsModal()" class="absolute top-4 right-4 text-gray-400 hover:text-amber-400 text-2xl font-bold px-2">&times;</button>
+            
+            <div id="modalContent">
+                <!-- ข่าวเนื้อหาเต็มจะแสดงตรงนี้ -->
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-[#0a0a0a] border-t border-gray-800 text-white py-8 mt-16 text-xs text-center text-gray-500">
         <p>&copy; 2026 SPILL-Z. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Data -->
+    <!-- JavaScript Data & Systems -->
     <script>
         const newsData = [
             {
@@ -118,40 +103,45 @@
                 title: "Next-Gen AI Models Revolutionize Daily Tech Workflows",
                 category: "Technology",
                 date: "3 SEP 2026",
-                image: "https://picsum.photos/600/350?random=10",
-                summary: "Recent advancements in artificial intelligence are redefining how software engineers and creators build modern digital solutions globally."
+                image: "https://picsum.photos/800/450?random=10",
+                summary: "Recent advancements in artificial intelligence are redefining how software engineers and creators build modern digital solutions globally.",
+                content: "Artificial intelligence has reached another milestone in 2026. The latest generative models are now integrated directly into developer environments, handling complex software architectures and automating quality control.<br><br>Industry leaders report productivity gains of over 40%, allowing teams to focus on design thinking and innovation rather than repetitive coding. As these systems evolve, ethical considerations and robust oversight remain at the forefront of discussion among tech policymakers."
             },
             {
                 id: 2,
                 title: "Modern Lifestyle Trends: Balancing Digital Connectivity and Mindful Living",
                 category: "Social & Lifestyle",
                 date: "3 SEP 2026",
-                image: "https://picsum.photos/600/350?random=20",
-                summary: "As remote work becomes standard, urban professionals are finding new ways to integrate wellness routines into their fast-paced daily schedules."
+                image: "https://picsum.photos/800/450?random=20",
+                summary: "As remote work becomes standard, urban professionals are finding new ways to integrate wellness routines into their fast-paced daily schedules.",
+                content: "With flexible working environments fully established in 2026, the boundary between professional output and personal rest has become crucial.<br><br>Many professionals are turning to digital detoxes, structured outdoor activities, and minimalist living habits to combat burnout. Experts recommend setting firm boundaries around notification hours and prioritizing face-to-face interactions to maintain mental resilience in a hyper-connected world."
             },
             {
                 id: 3,
                 title: "Breakthrough Study Highlights the Essential Roles of Sleep Hygiene",
                 category: "Health & Wellness",
                 date: "2 SEP 2026",
-                image: "https://picsum.photos/600/350?random=30",
-                summary: "Medical researchers publish findings showing direct correlations between structured evening habits and long-term cognitive function."
+                image: "https://picsum.photos/800/450?random=30",
+                summary: "Medical researchers publish findings showing direct correlations between structured evening habits and long-term cognitive function.",
+                content: "A landmark study released this week underscores the profound impact of consistent sleep schedules on long-term health.<br><br>Researchers observed over 10,000 participants over five years, discovering that individuals maintaining regular sleep cycles and limiting blue-light exposure before bed showed significantly higher memory retention and immune performance."
             },
             {
                 id: 4,
                 title: "Global Box Office Hits Record Highs with Immersive Cinema Formats",
                 category: "Entertainment",
                 date: "2 SEP 2026",
-                image: "https://picsum.photos/600/350?random=40",
-                summary: "The entertainment industry experiences unprecedented growth as audiences flock to interactive and high-definition theatrical releases."
+                image: "https://picsum.photos/800/450?random=40",
+                summary: "The entertainment industry experiences unprecedented growth as audiences flock to interactive and high-definition theatrical releases.",
+                content: "Cinema attendance has surged to new heights this season, fueled by next-generation interactive audio and visual technologies.<br><br>Audience demand for high-quality shared experiences has prompted major studios to re-invest heavily in theatrical releases, demonstrating that movie theaters remain a vital pillar of global entertainment culture."
             },
             {
                 id: 5,
                 title: "Higher Education Institutions Pivot Towards Flexible Micro-Credentials",
                 category: "Education",
                 date: "1 SEP 2026",
-                image: "https://picsum.photos/600/350?random=50",
-                summary: "Universities around the world are updating curricula to offer specialized certifications tailored for rapidly evolving market needs."
+                image: "https://picsum.photos/800/450?random=50",
+                summary: "Universities around the world are updating curricula to offer specialized certifications tailored for rapidly evolving market needs.",
+                content: "Educational institutions are rapidly adapting to the needs of the modern workforce. Short, intensive certification courses—often developed in partnership with industry leaders—are becoming a preferred alternative to traditional degree paths.<br><br>This transition allows students and working professionals to upskill quickly in areas like data analysis, digital ethics, and sustainable energy management."
             }
         ];
 
@@ -166,20 +156,49 @@
 
             data.forEach(item => {
                 const article = `
-                    <article class="flex flex-col md:flex-row gap-4 border-b border-gray-800 pb-6">
-                        <img src="${item.image}" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded">
+                    <article class="flex flex-col md:flex-row gap-4 border-b border-gray-800 pb-6 group cursor-pointer" onclick="openNewsModal(${item.id})">
+                        <img src="${item.image}" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded group-hover:opacity-80 transition">
                         <div class="flex-1">
                             <div class="flex items-center gap-2 mb-2">
                                 <span class="bg-amber-500 text-black text-[10px] font-bold uppercase px-2 py-0.5 rounded-sm">${item.category}</span>
                                 <span class="text-xs text-gray-500">${item.date}</span>
                             </div>
-                            <h3 class="serif-title text-xl font-bold text-gray-100 hover:text-amber-400 cursor-pointer mb-2 transition">${item.title}</h3>
+                            <h3 class="serif-title text-xl font-bold text-gray-100 group-hover:text-amber-400 mb-2 transition">${item.title}</h3>
                             <p class="serif-body text-sm text-gray-400 leading-relaxed mb-2">${item.summary}</p>
+                            <span class="text-xs text-amber-400 font-semibold group-hover:underline">Read Full Story &rarr;</span>
                         </div>
                     </article>
                 `;
                 container.innerHTML += article;
             });
+        }
+
+        // ระบบเปิด Popup อ่านข่าวฉบับเต็ม
+        function openNewsModal(newsId) {
+            const news = newsData.find(item => item.id === newsId);
+            if (!news) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-amber-500 text-black text-xs font-bold uppercase px-2 py-0.5 rounded-sm">${news.category}</span>
+                    <span class="text-xs text-gray-400">${news.date}</span>
+                </div>
+                <h1 class="serif-title text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">${news.title}</h1>
+                <img src="${news.image}" alt="News Banner" class="w-full h-64 md:h-80 object-cover rounded-lg mb-6">
+                <div class="serif-body text-gray-300 text-base leading-relaxed space-y-4">
+                    <p>${news.content}</p>
+                </div>
+            `;
+
+            document.getElementById('newsModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // ล็อคไม่ให้สกอร์ลหน้าหลัง
+        }
+
+        // ระบบปิด Popup
+        function closeNewsModal() {
+            document.getElementById('newsModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
 
         function filterNews(category) {

@@ -88,14 +88,14 @@
         }
     </script>
 
-    <!-- Script โหลดข้อมูลข่าวจาก content/news.json มาแสดงผลแบบอัตโนมัติ -->
+    <!-- Script โหลดข้อมูลข่าวจาก /content/news.json มาแสดงผลแบบอัตโนมัติ -->
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
         const newsContainer = document.getElementById("news-feed");
         if (!newsContainer) return;
 
         try {
-          const response = await fetch("content/news.json?v=" + new Date().getTime());
+          const response = await fetch("/content/news.json?v=" + new Date().getTime());
           if (!response.ok) throw new Error("Could not load news");
           
           const data = await response.json();

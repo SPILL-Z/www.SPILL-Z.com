@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPILL-Z NEWS</title>
+    <!-- Google Search Console Verification Tag -->
+    <meta name="google-site-verification" content="google37b2076b75dd354e" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -78,9 +80,9 @@
         }
     </script>
 
-    <!-- ฝังโค้ดดึงข่าวไว้ข้างในนี้โดยตรง เพื่อตัดปัญหาการโหลดไฟล์สคริปต์แยก -->
+    <!-- สคริปต์สำหรับดึงข้อมูลข่าวจาก news.json มาแสดงผลอัตโนมัติ -->
     <script>
-      console.log("Inline Script is running...");
+      console.log("Inline News Script is running...");
       async function loadNewsDirectly() {
         const newsContainer = document.getElementById("news-feed");
         if (!newsContainer) return;

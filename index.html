@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPILL-Z NEWS</title>
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .serif-title { font-family: 'Playfair Display', serif; }
-        .serif-body { font-family: 'Merriweather', serif; }
-    </style>
+    <!-- นำเข้าไฟล์ CSS แยก -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#121212] text-gray-100 min-h-screen">
 
@@ -20,7 +17,7 @@
         <!-- Top Utility Bar -->
         <div class="bg-[#0a0a0a] border-b border-gray-800 text-xs py-2 px-4 text-gray-400">
             <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <span>Thursday, September 10, 2026</span>
+                <span>Thursday, September 17, 2026</span>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-amber-400 transition">Newsletter</a>
                     <a href="#" class="hover:text-amber-400 transition">Subscribe</a>
@@ -52,7 +49,6 @@
 
         <!-- Content Container -->
         <main class="max-w-6xl mx-auto px-4 py-8">
-            
             <!-- Search Section -->
             <div class="mb-8 pb-4 border-b border-gray-800 flex justify-between items-center flex-wrap gap-4">
                 <h2 id="current-category" class="serif-title text-2xl font-bold uppercase text-amber-400">Latest Stories</h2>
@@ -62,7 +58,7 @@
             <!-- Layout Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 space-y-8" id="news-container">
-                    <!-- Data populated by JS -->
+                    <!-- โหลดรายการข่าวโดย JS -->
                 </div>
 
                 <!-- Sidebar -->
@@ -83,7 +79,6 @@
 
     <!-- ================= 2. หน้าอ่านข่าวแบบเต็มจอ (FULL ARTICLE VIEW) ================= -->
     <div id="article-view" class="hidden min-h-screen bg-[#121212]">
-        <!-- Article Header Bar -->
         <div class="bg-[#181818] border-b border-gray-800 sticky top-0 z-50">
             <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
                 <button onclick="closeArticlePage()" class="flex items-center gap-2 text-amber-400 font-semibold hover:underline text-sm">
@@ -93,10 +88,9 @@
             </div>
         </div>
 
-        <!-- Article Main Content -->
         <article class="max-w-3xl mx-auto px-4 py-10">
             <div id="article-content">
-                <!-- Content injected via JS -->
+                <!-- โหลดเนื้อหาข่าวเต็มโดย JS -->
             </div>
         </article>
     </div>
@@ -106,150 +100,7 @@
         <p>&copy; 2026 SPILL-Z. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Systems -->
-    <script>
-        const newsData = [
-            {
-                id: 1,
-                title: "Next-Gen AI Models Revolutionize Daily Tech Workflows",
-                category: "Technology",
-                date: "3 SEP 2026",
-                image: "https://picsum.photos/1200/600?random=10",
-                summary: "Recent advancements in artificial intelligence are redefining how software engineers and creators build modern digital solutions globally.",
-                content: `
-                    <p class="mb-4">Artificial intelligence has reached another milestone in 2026. The latest generative models are now integrated directly into developer environments, handling complex software architectures and automating quality control.</p>
-                    <p class="mb-4">Industry leaders report productivity gains of over 40%, allowing teams to focus on design thinking and innovation rather than repetitive coding. As these systems evolve, ethical considerations and robust oversight remain at the forefront of discussion among tech policymakers.</p>
-                    <p>Furthermore, educational institutions are quickly adapting their engineering curricula to ensure future graduates are skilled at directing and auditing AI systems effectively.</p>
-                `
-            },
-            {
-                id: 2,
-                title: "Modern Lifestyle Trends: Balancing Digital Connectivity and Mindful Living",
-                category: "Social & Lifestyle",
-                date: "3 SEP 2026",
-                image: "https://picsum.photos/1200/600?random=20",
-                summary: "As remote work becomes standard, urban professionals are finding new ways to integrate wellness routines into their fast-paced daily schedules.",
-                content: `
-                    <p class="mb-4">With flexible working environments fully established in 2026, the boundary between professional output and personal rest has become crucial.</p>
-                    <p class="mb-4">Many professionals are turning to digital detoxes, structured outdoor activities, and minimalist living habits to combat burnout. Experts recommend setting firm boundaries around notification hours and prioritizing face-to-face interactions to maintain mental resilience in a hyper-connected world.</p>
-                `
-            },
-            {
-                id: 3,
-                title: "Breakthrough Study Highlights the Essential Roles of Sleep Hygiene",
-                category: "Health & Wellness",
-                date: "2 SEP 2026",
-                image: "https://picsum.photos/1200/600?random=30",
-                summary: "Medical researchers publish findings showing direct correlations between structured evening habits and long-term cognitive function.",
-                content: `
-                    <p class="mb-4">A landmark study released this week underscores the profound impact of consistent sleep schedules on long-term health.</p>
-                    <p class="mb-4">Researchers observed over 10,000 participants over five years, discovering that individuals maintaining regular sleep cycles and limiting blue-light exposure before bed showed significantly higher memory retention and immune performance.</p>
-                `
-            },
-            {
-                id: 4,
-                title: "Global Box Office Hits Record Highs with Immersive Cinema Formats",
-                category: "Entertainment",
-                date: "2 SEP 2026",
-                image: "https://picsum.photos/1200/600?random=40",
-                summary: "The entertainment industry experiences unprecedented growth as audiences flock to interactive and high-definition theatrical releases.",
-                content: `
-                    <p class="mb-4">Cinema attendance has surged to new heights this season, fueled by next-generation interactive audio and visual technologies.</p>
-                    <p class="mb-4">Audience demand for high-quality shared experiences has prompted major studios to re-invest heavily in theatrical releases, demonstrating that movie theaters remain a vital pillar of global entertainment culture.</p>
-                `
-            },
-            {
-                id: 5,
-                title: "Higher Education Institutions Pivot Towards Flexible Micro-Credentials",
-                category: "Education",
-                date: "1 SEP 2026",
-                image: "https://picsum.photos/1200/600?random=50",
-                summary: "Universities around the world are updating curricula to offer specialized certifications tailored for rapidly evolving market needs.",
-                content: `
-                    <p class="mb-4">Educational institutions are rapidly adapting to the needs of the modern workforce. Short, intensive certification courses—often developed in partnership with industry leaders—are becoming a preferred alternative to traditional degree paths.</p>
-                    <p class="mb-4">This transition allows students and working professionals to upskill quickly in areas like data analysis, digital ethics, and sustainable energy management.</p>
-                `
-            }
-        ];
-
-        function renderNews(data) {
-            const container = document.getElementById('news-container');
-            container.innerHTML = '';
-
-            if(data.length === 0) {
-                container.innerHTML = `<p class="text-gray-500 italic py-8">No articles found matching your criteria.</p>`;
-                return;
-            }
-
-            data.forEach(item => {
-                const article = `
-                    <article class="flex flex-col md:flex-row gap-4 border-b border-gray-800 pb-6 group cursor-pointer" onclick="openArticlePage(${item.id})">
-                        <img src="${item.image}" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded group-hover:opacity-80 transition">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="bg-amber-500 text-black text-[10px] font-bold uppercase px-2 py-0.5 rounded-sm">${item.category}</span>
-                                <span class="text-xs text-gray-500">${item.date}</span>
-                            </div>
-                            <h3 class="serif-title text-xl font-bold text-gray-100 group-hover:text-amber-400 mb-2 transition">${item.title}</h3>
-                            <p class="serif-body text-sm text-gray-400 leading-relaxed mb-2">${item.summary}</p>
-                            <span class="text-xs text-amber-400 font-semibold group-hover:underline">Read Full Story &rarr;</span>
-                        </div>
-                    </article>
-                `;
-                container.innerHTML += article;
-            });
-        }
-
-        // ฟังก์ชันสลับไปหน้าอ่านข่าวแบบเต็มจอ
-        function openArticlePage(newsId) {
-            const news = newsData.find(item => item.id === newsId);
-            if (!news) return;
-
-            const articleContent = document.getElementById('article-content');
-            articleContent.innerHTML = `
-                <div class="flex items-center gap-2 mb-4">
-                    <span class="bg-amber-500 text-black text-xs font-bold uppercase px-2 py-1 rounded-sm">${news.category}</span>
-                    <span class="text-xs text-gray-400">${news.date}</span>
-                </div>
-                <h1 class="serif-title text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">${news.title}</h1>
-                <img src="${news.image}" alt="News Banner" class="w-full h-72 md:h-96 object-cover rounded-lg mb-8 shadow-xl">
-                <div class="serif-body text-gray-300 text-lg leading-relaxed space-y-6">
-                    ${news.content}
-                </div>
-            `;
-
-            document.getElementById('main-view').classList.add('hidden');
-            document.getElementById('article-view').classList.remove('hidden');
-            window.scrollTo(0, 0); // ดึงหน้าจอกลับไปด้านบนสุด
-        }
-
-        // ฟังก์ชันกลับมาหน้าหลัก
-        function closeArticlePage() {
-            document.getElementById('article-view').classList.add('hidden');
-            document.getElementById('main-view').classList.remove('hidden');
-            window.scrollTo(0, 0);
-        }
-
-        function filterNews(category) {
-            document.getElementById('current-category').innerText = category === 'ALL' ? 'Latest Stories' : category;
-            if (category === 'ALL') {
-                renderNews(newsData);
-            } else {
-                const filtered = newsData.filter(news => news.category === category);
-                renderNews(filtered);
-            }
-        }
-
-        function searchNews() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = newsData.filter(news => 
-                news.title.toLowerCase().includes(query) || 
-                news.summary.toLowerCase().includes(query)
-            );
-            renderNews(filtered);
-        }
-
-        renderNews(newsData);
-    </script>
+    <!-- นำเข้าไฟล์ JavaScript แยก -->
+    <script src="script.js"></script>
 </body>
 </html>

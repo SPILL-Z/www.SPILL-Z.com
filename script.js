@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!response.ok) throw new Error("Could not load news");
     
     const data = await response.json();
-    const newsList = data.newsData || [];
+    // รองรับทั้งแบบ array ตรงๆ และแบบมี nested object
+    const newsList = Array.isArray(data) ? data : (data.newsData || []);
 
     if (newsList.length === 0) {
       newsContainer.innerHTML = `<p class="text-gray-500">ยังไม่มีบทความข่าวในระบบ</p>`;
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">${item.category || 'News'}</span>
           <h3 class="text-xl font-bold text-white mt-1">${item.title}</h3>
           <p class="text-gray-400 text-sm mt-2">${item.summary || ''}</p>
-          <span class="text-xs text-gray-500 mt-4 block">${item.date ? new Date(item.date).toLocaleDateString() : ''}</span>
+          <span class="text-xs text-gray-500 mt-4 block">${item.date || ''}</span>
         </div>
       </article>
     `).join("");

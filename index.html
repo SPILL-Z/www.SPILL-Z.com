@@ -14,7 +14,7 @@
 </head>
 <body class="bg-[#121212] text-gray-100 min-h-screen">
 
-    <!-- ==================== 1. หน้าหลัก (MAIN HOME VIEW) ==================== -->
+    <!-- =============================== 1. หน้าหลัก (MAIN HOME VIEW) =============================== -->
     <div id="main-view">
         <!-- Top Utility Bar -->
         <div class="bg-[#0a0a0a] border-b border-gray-800 text-xs py-2 px-4 text-gray-400">
@@ -77,15 +77,17 @@
 
     <!-- Script สำหรับดักจับเหตุการณ์การล็อกอิน/ตั้งรหัสผ่าน -->
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
             });
-          }
-        });
-      }
+        }
     </script>
+    <!-- นำเข้าสคริปต์หลักสำหรับดึงข้อมูลข่าว -->
+    <script src="script.js"></script>
 </body>
 </html>

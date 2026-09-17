@@ -8,13 +8,17 @@ public_folder: "/images"
 collections:
   - name: "news"
     label: "News Articles"
-    folder: "content/news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Category", name: "category", widget: "select", options: ["Technology", "Social & Lifestyle", "Health & Wellness", "Entertainment", "Education"] }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files:
+      - file: "content/news.json"
+        label: "News Data"
+        name: "news_data"
+        fields:
+          - label: "News List"
+            name: "newsData"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Publish Date", name: "date", widget: "datetime" }
+              - { label: "Category", name: "category", widget: "select", options: ["Technology", "Social & Lifestyle", "Health & Wellness", "Entertainment", "Education"] }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Featured Image", name: "image", widget: "image", required: false }

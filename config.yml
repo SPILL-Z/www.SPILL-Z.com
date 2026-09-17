@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: spill-z/spill-z.github.io # ตรวจสอบว่าเป็น username/repository ของคุณ
+  branch: main
+
+media_folder: "images/uploads" # โฟลเดอร์ที่ใช้เก็บรูปภาพข่าวที่อัปโหลด
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news"
+    label: "News Articles"
+    files:
+      - file: "script.js"
+        label: "Manage News Data"
+        name: "news_data"
+        fields:
+          - { label: "News List", name: "newsData", widget: "list", fields: [
+              { label: "ID", name: "id", widget: "number" },
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Category", name: "category", widget: "select", options: ["Technology", "Social & Lifestyle", "Health & Wellness", "Entertainment", "Education"] },
+              { label: "Date", name: "date", widget: "string" },
+              { label: "Image URL / Upload", name: "image", widget: "image" },
+              { label: "Summary", name: "summary", widget: "text" },
+              { label: "Full Content (HTML)", name: "content", widget: "markdown" }
+            ]}
+            

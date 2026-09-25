@@ -1,374 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPILL-Z NEWS</title>
+    <title>SPILL-Z - Modern News</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: sans-serif; }
-        .display-title { font-family: 'Anton', sans-serif; letter-spacing: 0.05em; }
-    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#121212',
+                        cardBg: '#1E1E1E',
+                        accentGreen: '#E9F9B5',
+                        accentPurple: '#503E93',
+                        accentOrange: '#F26A44'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#9B8AFB] text-[#FFE3F1] min-h-screen">
-    <div id="main-view">
-        <div class="bg-[#9B8AFB] border-b border-[#FFE3F1]/20 text-xs py-2 px-4">
-            <div class="max-w-6xl mx-auto flex justify-between items-center font-semibold">
-                <span>Friday, September 25, 2026</span>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-[#E2F89C]">Newsletter</a>
-                    <a href="#" class="hover:text-[#E2F89C]">Subscribe</a>
-                </div>
-            </div>
+<body class="bg-[#121212] text-gray-100 min-h-screen font-sans">
+    <header class="border-b border-gray-800 p-4 sticky top-0 bg-[#121212]/90 backdrop-blur z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-wider text-[#E9F9B5]">SPILL-Z</h1>
+            <nav class="space-x-4 text-sm font-medium">
+                <a href="index.html" class="hover:text-[#F26A44] transition">Home</a>
+                <a href="news.html" class="hover:text-[#F26A44] transition">All News</a>
+            </nav>
         </div>
+    </header>
 
-        <header class="bg-[#9B8AFB] py-8 border-b border-[#FFE3F1]/20 text-center">
-            <h1 class="display-title text-7xl md:text-9xl tracking-wider uppercase">SPILL-Z</h1>
-            <p class="text-sm uppercase tracking-widest text-[#E2F89C] mt-2 font-bold">Independent Journalism & Updates</p>
-        </header>
+    <main class="max-w-6xl mx-auto p-4 md:p-6 space-y-8">
+        <!-- Recommended Section -->
+        <section>
+            <h2 class="text-xl font-bold mb-4 text-[#E9F9B5] flex items-center gap-2">🔥 Recommended News</h2>
+            <a href="news.html?id=1" class="block bg-[#E9F9B5] p-5 border-2 border-[#503E93]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
+                <img src="images/social1.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
+                <div>
+                    <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Social & Lifestyle</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mt-1 tracking-wide">Gen Z Disrupts Fashion Industry in Push for Self-Expression</h3>
+                    <p class="text-sm mt-2 line-clamp-2">Analyzing how young consumers are reshaping fashion retail through bold self-expression, innovative styling, and sustainable choices...</p>
+                </div>
+            </a>
+        </section>
 
-        <!-- Navigation Bar -->
-        <nav class="bg-[#F26A44] border-b border-[#FFE3F1]/20 sticky top-0 z-40 shadow-lg">
-            <div class="max-w-6xl mx-auto px-4">
-                <ul class="flex flex-wrap justify-center font-bold text-sm md:text-base uppercase tracking-wider">
-                    <li><a href="#recommended" class="inline-block py-3 px-3 hover:text-[#E2F89C]">★ Recommended</a></li>
-                    <li><a href="#social" class="inline-block py-3 px-3 hover:text-[#E2F89C]">Social</a></li>
-                    <li><a href="#health" class="inline-block py-3 px-3 hover:text-[#E2F89C]">Health</a></li>
-                    <li><a href="#entertainment" class="inline-block py-3 px-3 hover:text-[#E2F89C]">Entertainment</a></li>
-                    <li><a href="#technology" class="inline-block py-3 px-3 hover:text-[#E2F89C]">Technology</a></li>
-                    <li><a href="#education" class="inline-block py-3 px-3 hover:text-[#E2F89C]">Education</a></li>
-                </ul>
+        <!-- Social & Lifestyle Section -->
+        <section>
+            <h2 class="text-xl font-bold mb-4 text-[#E9F9B5]">Social & Lifestyle</h2>
+            <div class="grid gap-4">
+                <a href="news.html?id=1" class="block bg-[#1E1E1E] p-5 border border-gray-800 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-[#E9F9B5] transition">
+                    <img src="images/social1.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
+                    <div>
+                        <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
+                        <h3 class="text-xl font-bold mt-1 text-white">Gen Z Disrupts Fashion Industry in Push for Self-Expression</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Analyzing how young consumers are reshaping fashion retail through bold self-expression...</p>
+                    </div>
+                </a>
             </div>
-        </nav>
+        </section>
+    </main>
 
-        <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
-            
-            <!-- Recommended News (5 Highlights from 5 Categories) -->
-            <section id="recommended" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2 flex items-center gap-2">
-                    <span class="text-[#E9F9B5]">★</span> Recommended Stories (Top Highlights)
-                </h2>
-                <div class="space-y-4">
-                    <!-- 1. Social (id=1) -->
-                    <a href="news.html?id=1" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news1.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Gen Z Disrupts Fashion Industry in Push for Self-Expression</h3>
-                            <p class="text-sm mt-1 opacity-95 font-medium">Analyzing how young consumers are reshaping fashion retail through bold self-expression...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-
-                    <!-- 2. Health (id=6) -->
-                    <a href="news.html?id=6" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news6.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Zone 2 Cardio Training: The Secret to Endless Stamina</h3>
-                            <p class="text-sm mt-1 opacity-95 font-medium">Why slow running and heart rate monitoring build a stronger base...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-
-                    <!-- 3. Entertainment (id=11) -->
-                    <a href="news.html?id=11" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news11.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Marvel Cinematic Universe Phase Releases in 2026</h3>
-                            <p class="text-sm mt-1 opacity-95 font-medium">Breaking down upcoming comic adaptations and streaming hits...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-
-                    <!-- 4. Technology (id=16) -->
-                    <a href="news.html?id=16" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news16.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">AI Translation Tools and Subtitle Localization in 2026</h3>
-                            <p class="text-sm mt-1 opacity-95 font-medium">Evaluating machine translation models against cultural references...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-
-                    <!-- 5. Education (id=21) -->
-                    <a href="news.html?id=21" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news21.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wide">Recommended • Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">AVT and Subtitling Strategies in Modern Media Analysis</h3>
-                            <p class="text-sm mt-1 opacity-95 font-medium">Examining translation frameworks and cultural reference models...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Social & Lifestyle (5) -->
-            <section id="social" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2">Social & Lifestyle (5 Stories)</h2>
-                <div class="space-y-4">
-                    <a href="news.html?id=1" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news1.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Gen Z Disrupts Fashion Industry in Push for Self-Expression</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Analyzing how young consumers are reshaping fashion retail through bold self-expression...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=2" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news2.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Urban Living: The Rise of Smart Minimalist Apartments</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">How city dwellers are optimizing tiny spaces with clever tech...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 24, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=3" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news3.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Sustainable Fashion and Eco-Friendly Fabrics in Trend</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Why Gen-Z consumers are leaning towards biodegradable materials...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 23, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=4" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news4.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Cafe Culture Evolution: Beyond Coffee to Community Hubs</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Cafes are transforming into co-working and creative workshops...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 22, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=5" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news5.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Social & Lifestyle</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Weekend Getaways: Hidden Nature Spots Near Bangkok</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Escape the city rush with these quiet, green sanctuaries...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 21, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Health & Wellness (5) -->
-            <section id="health" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2">Health & Wellness (5 Stories)</h2>
-                <div class="space-y-4">
-                    <a href="news.html?id=6" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news6.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Zone 2 Cardio Training: The Secret to Endless Stamina</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Why slow running and heart rate monitoring build a stronger base...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=7" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news7.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Mindfulness and Mental Reset in High-Stress Jobs</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Simple breathing techniques to keep calm during heavy workloads...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 24, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=8" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news8.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Nutrition Hacks for Night Shift Workers and Rescuers</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Maintaining energy and balanced metabolism on irregular schedules...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 23, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=9" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news9.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">The Importance of Rest Days in Muscle Recovery</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Overtraining pitfalls and how proper resting improves running pace...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 22, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=10" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news10.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Health & Wellness</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Sleep Hygiene: Crafting the Perfect Night Routine</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Optimizing deep sleep phases for better cognitive performance...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 21, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Entertainment (5) -->
-            <section id="entertainment" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2">Entertainment (5 Stories)</h2>
-                <div class="space-y-4">
-                    <a href="news.html?id=11" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news11.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Marvel Cinematic Universe Phase Releases in 2026</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Breaking down upcoming comic adaptations and streaming hits...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=12" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news12.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Board Game Nights: Why Analog Social Gaming is Back</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">From strategic Go matches to cooperative digital-board hybrids...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 24, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=13" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news13.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Collectible Trading Card Craze: Shin-chan & One Piece</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Inside the rare card hunting community and trading values...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 23, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=14" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news14.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Multiplayer Gaming Session Setup: CS2 & Battlefield 1</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Tips for tactical squad coordination and class loadouts...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 22, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=15" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news15.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Entertainment</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Indie Game Spotlight: Steam Remote Play Together Hits</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Top co-op simulation games to enjoy with friends remotely...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 21, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Technology (5) -->
-            <section id="technology" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2">Technology (5 Stories)</h2>
-                <div class="space-y-4">
-                    <a href="news.html?id=16" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news16.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">AI Translation Tools and Subtitle Localization in 2026</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Evaluating machine translation models against cultural references...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=17" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news17.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Building Dark-Mode SPA News Sites with GitHub Pages</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Lightweight web development workflows without paid hosting dependencies...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 24, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=18" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news18.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Digital Logistics and Automated Air Waybill Systems</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Streamlining international trade documentation and cargo tracking...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 23, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=19" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news19.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Smart Scooter Tech: Enhancing Rider Safety and Aero Windshields</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Aftermarket gadget integrations for modern touring scooters...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 22, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=20" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news20.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Technology</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Fintech Apps & DCA Tracking for Long-Term Investors</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Automating index fund investments with secure mobile platforms...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 21, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Education (5) -->
-            <section id="education" class="space-y-6">
-                <h2 class="display-title text-4xl border-b border-[#FFE3F1]/20 pb-2">Education & Academic Research (5 Stories)</h2>
-                <div class="space-y-4">
-                    <a href="news.html?id=21" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news21.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">AVT and Subtitling Strategies in Modern Media Analysis</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Examining translation frameworks and cultural reference models...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 25, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=22" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news22.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Machine Translation Evaluation Metrics in Linguistic Studies</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Comparing human translation output with AI-generated models...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 24, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=23" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news23.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Extralinguistic Culture-Bound References in Film Localization</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Applying Jan-Emil Pedersen's model to English-to-Thai subtitle scripts...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 23, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=24" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news24.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">Translating Humor: Zabalbeascoa's Priorities and Restrictions</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">Analyzing comedy script localization hurdles and adaptation methods...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 22, 2026</span>
-                        </div>
-                    </a>
-                    <a href="news.html?id=25" class="block bg-[#E9F9B5] p-5 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md hover:scale-[1.01] transition text-[#503E93]">
-                        <img src="/images/news25.jpg" alt="News" class="w-full md:w-40 h-28 object-cover rounded-xl">
-                        <div>
-                            <span class="text-xs font-bold text-[#F26A44] uppercase">Education & Academic Research</span>
-                            <h3 class="display-title text-3xl mt-1 tracking-wide">The Role of AI Assistants in Undergraduate English Studies</h3>
-                            <p class="text-sm mt-1 opacity-90 font-medium">How language students leverage LLMs for research and editing workflows...</p>
-                            <span class="text-xs opacity-70 mt-2 block font-bold">September 21, 2026</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </main>
-    </div>
+    <footer class="border-t border-gray-800 text-center py-6 mt-12 text-sm text-gray-500">
+        &copy; 2026 SPILL-Z. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

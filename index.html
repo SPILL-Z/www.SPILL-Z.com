@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPILL-Z NEWS - Color Palette Theme</title>
+    <title>SPILL-Z NEWS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- ดึงฟอนต์แนว Gen Z สุดฮิต (Plus Jakarta Sans และ Space Grotesk) อ่านง่าย ทันสมัย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        /* ตั้งค่าฟอนต์หลักให้เป็นสไตล์ Gen Z อ่านง่าย ทันสมัย */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .genz-title {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-[#826DEE] text-[#FF99DC] min-h-screen"> <!-- เปลี่ยนพื้นหลังและสีข้อความหลัก -->
+<body class="bg-[#826DEE] text-[#FF99DC] min-h-screen">
 
     <div id="main-view">
-        <div class="bg-[#826DEE] border-b border-gray-600 text-xs py-2 px-4 text-[#FF99DC]"> <!-- เปลี่ยนสีส่วนบนสุด -->
-            <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <span>Thursday, September 17, 2026</span>
+        <!-- แถบแจ้งวันที่และเมนูเล็กด้านบน -->
+        <div class="bg-[#826DEE] border-b border-[#FF99DC]/30 text-xs py-2 px-4 text-[#FF99DC]">
+            <div class="max-w-6xl mx-auto flex justify-between items-center font-medium">
+                <span>Thursday, September 25, 2026</span>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-[#D8F382] transition">Newsletter</a>
                     <a href="#" class="hover:text-[#D8F382] transition">Subscribe</a>
@@ -22,60 +35,55 @@
             </div>
         </div>
 
-        <header class="bg-[#826DEE] text-white py-8 border-b border-gray-600"> <!-- เปลี่ยนสี Header -->
+        <!-- Header หลักของเว็บไซต์ -->
+        <header class="bg-[#826DEE] text-white py-8 border-b border-[#FF99DC]/30">
             <div class="max-w-6xl mx-auto px-4 text-center">
-                <h1 class="serif-title text-4xl md:text-6xl font-black tracking-wider uppercase text-[#FF99DC]">SPILL-Z</h1> <!-- เปลี่ยนสีหัวข้อหลัก -->
-                <p class="text-xs uppercase tracking-widest text-[#D8F382] mt-2">Independent Journalism & Updates</p> <!-- เปลี่ยนสีข้อความรอง -->
+                <h1 class="genz-title text-4xl md:text-6xl font-extrabold tracking-wider uppercase text-[#FF99DC]">SPILL-Z</h1>
+                <p class="text-xs uppercase tracking-widest text-[#D8F382] mt-2 font-semibold">Independent Journalism & Updates</p>
             </div>
         </header>
 
-        <nav class="bg-[#EB4213] border-b border-gray-600 shadow-lg sticky top-0 z-40"> <!-- เปลี่ยนสี Navigation -->
+        <!-- แถบนำทาง (Navigation) สีแดงสด -->
+        <nav class="bg-[#EB4213] border-b border-[#FF99DC]/30 shadow-lg sticky top-0 z-40">
             <div class="max-w-6xl mx-auto px-4">
-                <ul class="flex flex-wrap justify-center font-semibold text-xs md:text-sm text-[#FF99DC] uppercase tracking-wide">
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Home</a></li>
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Social & Lifestyle</a></li>
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Health & Wellness</a></li>
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Entertainment</a></li>
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Education</a></li>
-                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] border-b-2 border-transparent hover:border-[#D8F382] transition">Technology</a></li>
+                <ul class="flex flex-wrap justify-center font-bold text-xs md:text-sm text-[#FF99DC] uppercase tracking-wide">
+                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] transition">Home</a></li>
+                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] transition">Social & Lifestyle</a></li>
+                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] transition">Health & Wellness</a></li>
+                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] transition">Entertainment</a></li>
+                    <li><a href="#" class="inline-block py-3 px-4 hover:text-[#D8F382] transition">Technology</a></li>
                 </ul>
             </div>
         </nav>
 
+        <!-- เนื้อหาหลัก -->
         <main class="max-w-6xl mx-auto px-4 py-8">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- ส่วนแสดงข่าวสาร (Latest Stories) -->
                 <div class="lg:col-span-2 space-y-8">
-                    <h2 class="text-xl font-bold uppercase tracking-wider text-[#FF99DC] border-b border-gray-600 pb-2">Latest Stories</h2>
+                    <h2 class="genz-title text-lg font-bold uppercase tracking-wider text-[#FF99DC] border-b border-[#FF99DC]/30 pb-2">Latest Stories</h2>
                     <div id="news-feed" class="space-y-6">
-                        <!-- ข่าวจะถูกโหลดมาแสดงตรงนี้ ตัวอย่างการ์ดข่าว: -->
-                        <article class="bg-[#D8F382] p-6 border border-gray-600 rounded flex flex-col md:flex-row gap-6"> <!-- เปลี่ยนสีพื้นหลังการ์ดข่าว -->
-                            <img src="/images/placeholder.jpg" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded">
+                        <!-- ตัวอย่างการ์ดข่าว สีเขียวอ่อน -->
+                        <article class="bg-[#D8F382] p-6 border-2 border-[#826DEE] rounded-xl flex flex-col md:flex-row gap-6 shadow-md">
+                            <img src="/images/placeholder.jpg" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded-lg">
                             <div>
-                                <span class="text-xs font-bold text-[#826DEE] uppercase tracking-wider">Category</span> <!-- เปลี่ยนสีหมวดหมู่ -->
-                                <h3 class="text-xl font-bold text-[#826DEE] mt-1">Example News Headline</h3> <!-- เปลี่ยนสีหัวข้อข่าว -->
-                                <p class="text-gray-700 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <!-- เปลี่ยนสีข้อความสรุป -->
-                                <span class="text-xs text-gray-600 mt-4 block">2026-09-17</span> <!-- เปลี่ยนสีวันที่ -->
+                                <span class="text-xs font-extrabold text-[#EB4213] uppercase tracking-wider">Social & Lifestyle</span>
+                                <h3 class="genz-title text-xl font-bold text-[#826DEE] mt-1">Next-Gen Trends Shifting Digital Workflows in 2026</h3>
+                                <p class="text-[#826DEE]/90 text-sm mt-2 font-medium">Explore how modern creators and digital platforms are adapting to rapid technological transformations.</p>
+                                <span class="text-xs text-[#826DEE]/70 mt-4 block font-semibold">September 25, 2026</span>
                             </div>
                         </article>
-                        <article class="bg-[#D8F382] p-6 border border-gray-600 rounded flex flex-col md:flex-row gap-6">
-                          <img src="/images/placeholder.jpg" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded">
-                          <div>
-                              <span class="text-xs font-bold text-[#826DEE] uppercase tracking-wider">Category</span>
-                              <h3 class="text-xl font-bold text-[#826DEE] mt-1">Another Example Headline</h3>
-                              <p class="text-gray-700 text-sm mt-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                              <span class="text-xs text-gray-600 mt-4 block">2026-09-17</span>
-                          </div>
-                      </article>
                     </div>
                 </div>
 
+                <!-- ส่วนแถบด้านข้าง (Sidebar - Most Viewed) สีชมพู -->
                 <aside class="space-y-8">
-                    <div class="bg-[#FF99DC] p-6 border border-gray-600 rounded"> <!-- เปลี่ยนสี Sidebar -->
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-[#EB4213] mb-4 border-b border-gray-600 pb-2">Most Viewed</h3> <!-- เปลี่ยนสีหัวข้อ Sidebar -->
-                        <ol class="space-y-4 text-sm text-[#EB4213] list-decimal list-inside"> <!-- เปลี่ยนสีรายการใน Sidebar -->
-                            <li class="hover:text-[#D8F382] cursor-pointer transition">Global trends shifting towards AI-driven daily workflows</li>
-                            <li class="hover:text-[#D8F382] cursor-pointer transition">New health guidelines released for hybrid workers</li>
-                            <li class="hover:text-[#D8F382] cursor-pointer transition">Education sector adopts modern digital frameworks</li>
+                    <div class="bg-[#FF99DC] p-6 border-2 border-[#826DEE] rounded-xl shadow-md">
+                        <h3 class="genz-title text-sm font-extrabold uppercase tracking-wider text-[#EB4213] mb-4 border-b border-[#EB4213]/30 pb-2">Most Viewed</h3>
+                        <ol class="space-y-4 text-sm text-[#EB4213] font-semibold list-decimal list-inside">
+                            <li class="hover:text-[#826DEE] cursor-pointer transition">Global digital spaces and new platform features</li>
+                            <li class="hover:text-[#826DEE] cursor-pointer transition">Modern minimalist lifestyle trends among teens</li>
+                            <li class="hover:text-[#826DEE] cursor-pointer transition">Tech updates and automated content workflows</li>
                         </ol>
                     </div>
                 </aside>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPILL-Z NEWS - Article</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Mali', 'Itim', cursive, sans-serif; }
+        .handwriting-title { font-family: 'Itim', cursive, sans-serif; }
+    </style>
+</head>
+<body class="bg-[#9B8AFB] text-[#FFE3F1] min-h-screen">
+
+    <nav class="bg-[#F26A44] border-b border-[#FFE3F1]/20 shadow-lg sticky top-0 z-40">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="handwriting-title text-xl font-bold hover:text-[#E2F89C]">← กลับหน้าแรก SPILL-Z</a>
+            <span class="text-xs uppercase tracking-widest text-[#E2F89C] font-semibold">Article Details</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <article class="bg-[#E9F9B5] text-[#503E93] p-8 md:p-12 border-2 border-[#9B8AFB]/40 rounded-3xl shadow-xl">
+            <div class="flex justify-between items-center mb-4">
+                <span id="news-category" class="text-xs md:text-sm font-bold text-[#F26A44] uppercase tracking-wider bg-white/50 px-3 py-1 rounded-full">Category</span>
+                <span id="news-date" class="text-xs md:text-sm font-semibold opacity-70">Date</span>
+            </div>
+
+            <h1 id="news-title" class="handwriting-title text-3xl md:text-5xl font-bold leading-tight mb-6">
+                Loading Title...
+            </h1>
+
+            <div class="mb-8">
+                <img id="news-image" src="/images/placeholder.jpg" alt="News Image" class="w-full h-72 md:h-96 object-cover rounded-2xl border-2 border-[#9B8AFB]/30 shadow-md">
+            </div>
+
+            <div id="news-content" class="space-y-4 text-base md:text-lg font-medium leading-relaxed opacity-95">
+                <p>Loading content...</p>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-[#503E93]/20 text-center">
+                <a href="index.html" class="inline-block bg-[#9B8AFB] text-[#FFE3F1] px-6 py-3 rounded-full font-bold hover:bg-[#F26A44] transition shadow-md">
+                    ← กลับสู่หน้าหลักข่าวทั้งหมด
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // ข้อมูลข่าวทั้ง 20 ข่าว
+        const newsData = {
+            1: { cat: "Social & Lifestyle", title: "Next-Gen Trends Shifting Digital Workflows in 2026", date: "September 25, 2026", img: "/images/news1.jpg", text: "Explore how modern creators and digital platforms are adapting to rapid technological transformations. In the current digital landscape, workflows are evolving faster than ever, driven by community-led initiatives and innovative content structures." },
+            2: { cat: "Social & Lifestyle", title: "Urban Living: The Rise of Smart Minimalist Apartments", date: "September 24, 2026", img: "/images/news2.jpg", text: "How city dwellers are optimizing tiny spaces with clever tech and multifunctional furniture designs tailored for modern urban lifestyles." },
+            3: { cat: "Social & Lifestyle", title: "Sustainable Fashion and Eco-Friendly Fabrics in Trend", date: "September 23, 2026", img: "/images/news3.jpg", text: "Why Gen-Z consumers are leaning towards biodegradable materials, synthetic windbreakers, and conscious clothing brands." },
+            4: { cat: "Social & Lifestyle", title: "Cafe Culture Evolution: Beyond Coffee to Community Hubs", date: "September 22, 2026", img: "/images/news4.jpg", text: "Cafes are transforming into co-working spaces, digital creator workshops, and vibrant social hubs in Bangkok." },
+            5: { cat: "Social & Lifestyle", title: "Weekend Getaways: Hidden Nature Spots Near Bangkok", date: "September 21, 2026", img: "/images/news5.jpg", text: "Escape the city rush with these quiet, green sanctuaries perfect for outdoor running and mental recharging." },
+            6: { cat: "Health & Wellness", title: "Zone 2 Cardio Training: The Secret to Endless Stamina", date: "September 25, 2026", img: "/images/news6.jpg", text: "Why slow running and heart rate monitoring build a stronger endurance base without causing burnout or injury." },
+            7: { cat: "Health & Wellness", title: "Mindfulness and Mental Reset in High-Stress Jobs", date: "September 24, 2026", img: "/images/news7.jpg", text: "Simple breathing techniques and psychological strategies to keep calm during heavy workloads and emergencies." },
+            8: { cat: "Health & Wellness", title: "Nutrition Hacks for Night Shift Workers and Rescuers", date: "September 23, 2026", img: "/images/news8.jpg", text: "Maintaining stable energy levels and balanced metabolism on irregular schedules and late-night operations." },
+            9: { cat: "Health & Wellness", title: "The Importance of Rest Days in Muscle Recovery", date: "September 22, 2026", img: "/images/news9.jpg", text: "Overtraining pitfalls and how scheduled rest days drastically improve overall running pace and physical well-being." },
+            10: { cat: "Health & Wellness", title: "Sleep Hygiene: Crafting the Perfect Night Routine", date: "September 21, 2026", img: "/images/news10.jpg", text: "Optimizing deep sleep phases, reducing screen time, and establishing ideal bedroom conditions for cognitive performance." },
+            11: { cat: "Entertainment", title: "Marvel Cinematic Universe Phase Releases in 2026", date: "September 25, 2026", img: "/images/news11.jpg", text: "Breaking down upcoming comic book adaptations, digital reader stats on Marvel Unlimited, and major streaming hits." },
+            12: { cat: "Entertainment", title: "Board Game Nights: Why Analog Social Gaming is Back", date: "September 24, 2026", img: "/images/news12.jpg", text: "From strategic Go matches and Tesuji patterns to cooperative digital-board hybrids played via Steam Remote Play." },
+            13: { cat: "Entertainment", title: "Collectible Trading Card Craze: Shin-chan & One Piece", date: "September 23, 2026", img: "/images/news13.jpg", text: "Inside the rare card hunting community, 5-star Bigga lemon soda prizes, and OP-09 booster pack market values." },
+            14: { cat: "Entertainment", title: "Multiplayer Gaming Session Setup: CS2 & Battlefield 1", date: "September 22, 2026", img: "/images/news14.jpg", text: "Tips for tactical squad coordination, Scout class rifle loadouts, and ranking up efficiently in competitive matches." },
+            15: { cat: "Entertainment", title: "Indie Game Spotlight: Steam Remote Play Together Hits", date: "September 21, 2026", img: "/images/news15.jpg", text: "Top co-op life simulation games and fun multiplayer experiences to enjoy with friends remotely without extra purchases." },
+            16: { cat: "Technology", title: "AI Translation Tools and Subtitle Localization in 2026", date: "September 25, 2026", img: "/images/news16.jpg", text: "Evaluating machine translation models and ChatGPT/Claude against Jan-Emil Pedersen's ECR cultural models." },
+            17: { cat: "Technology", title: "Building Dark-Mode SPA News Sites with GitHub Pages", date: "September 24, 2026", img: "/images/news17.jpg", text: "Lightweight web development workflows, single-page application setups, and hosting tips for independent creators." },
+            18: { cat: "Technology", title: "Digital Logistics and Automated Air Waybill Systems", date: "September 23, 2026", img: "/images/news18.jpg", text: "Streamlining international trade documentation, customs regulations, and digital cargo tracking procedures." },
+            19: { cat: "Technology", title: "Smart Scooter Tech: Enhancing Rider Safety and Aero Windshields", date: "September 22, 2026", img: "/images/news19.jpg", text: "Aftermarket touring windshield stability and crash bar accessory integrations for Yamaha NMAX Tech MAX scooters." },
+            20: { cat: "Technology", title: "Fintech Apps & DCA Tracking for Long-Term Investors", date: "September 20, 2026", img: "/images/news20.jpg", text: "Automating index fund investments (VOO, tech stocks) with secure mobile platforms like Dime! for steady financial growth." }
+        };
+
+        // ดึงค่า id จาก URL (เช่น news.html?id=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const newsId = urlParams.get('id') || 1;
+
+        // นำข้อมูลมาแสดงผลในหน้าเว็บ
+        if (newsData[newsId]) {
+            document.getElementById('news-category').innerText = newsData[newsId].cat;
+            document.getElementById('news-date').innerText = newsData[newsId].date;
+            document.getElementById('news-title').innerText = newsData[newsId].title;
+            document.getElementById('news-image').src = newsData[newsId].img;
+            document.getElementById('news-content').innerHTML = `<p>${newsData[newsId].text}</p>`;
+            document.title = `${newsData[newsId].title} - SPILL-Z NEWS`;
+        }
+    </script>
+</body>
+</html>

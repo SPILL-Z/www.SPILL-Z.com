@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPILL-Z NEWS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ดึงฟอนต์แนว Gen Z อ่านง่าย ทันสมัย -->
+    <!-- ดึงฟอนต์ลายมือสุดน่ารักจาก Google Fonts (ฟอนต์ Mali และ Itim แนวเดียวกับในรูปตัวอย่าง) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
+        /* ตั้งค่าให้เว็บไซต์ทั้งหมดใช้ฟอนต์ลายมือสไตล์น่ารัก */
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Mali', 'Itim', cursive, sans-serif;
         }
-        .genz-title {
-            font-family: 'Space Grotesk', sans-serif;
+        .handwriting-title {
+            font-family: 'Itim', cursive, sans-serif;
         }
     </style>
 </head>
-<!-- ปรับสีพื้นหลังหลักให้เป็นสีม่วงพาสเทลอ่อนลง -->
+<!-- พื้นหลังสีม่วงพาสเทลอ่อนละมุน -->
 <body class="bg-[#9B8AFB] text-[#FFE3F1] min-h-screen">
 
     <div id="main-view">
-        <!-- แถบแจ้งวันที่และเมนูเล็กด้านบน -->
+        <!-- แถบแจ้งวันที่ด้านบน -->
         <div class="bg-[#9B8AFB] border-b border-[#FFE3F1]/20 text-xs py-2 px-4 text-[#FFE3F1]">
-            <div class="max-w-6xl mx-auto flex justify-between items-center font-medium">
+            <div class="max-w-6xl mx-auto flex justify-between items-center font-semibold">
                 <span>Friday, September 25, 2026</span>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-[#E2F89C] transition">Newsletter</a>
@@ -38,15 +39,15 @@
         <!-- Header หลักของเว็บไซต์ -->
         <header class="bg-[#9B8AFB] text-white py-8 border-b border-[#FFE3F1]/20">
             <div class="max-w-6xl mx-auto px-4 text-center">
-                <h1 class="genz-title text-4xl md:text-6xl font-extrabold tracking-wider uppercase text-[#FFE3F1]">SPILL-Z</h1>
-                <p class="text-xs uppercase tracking-widest text-[#E2F89C] mt-2 font-semibold">Independent Journalism & Updates</p>
+                <h1 class="handwriting-title text-5xl md:text-7xl font-bold tracking-wider uppercase text-[#FFE3F1]">SPILL-Z</h1>
+                <p class="text-sm uppercase tracking-widest text-[#E2F89C] mt-2 font-semibold">Independent Journalism & Updates</p>
             </div>
         </header>
 
-        <!-- แถบนำทาง (Navigation) ปรับแดงให้อ่อนและละมุนขึ้น -->
+        <!-- แถบนำทาง (Navigation) สีส้มพาสเทลละมุน -->
         <nav class="bg-[#F26A44] border-b border-[#FFE3F1]/20 shadow-lg sticky top-0 z-40">
             <div class="max-w-6xl mx-auto px-4">
-                <ul class="flex flex-wrap justify-center font-bold text-xs md:text-sm text-[#FFE3F1] uppercase tracking-wide">
+                <ul class="flex flex-wrap justify-center font-bold text-sm md:text-base text-[#FFE3F1] uppercase tracking-wide">
                     <li><a href="#" class="inline-block py-3 px-4 hover:text-[#E2F89C] transition">Home</a></li>
                     <li><a href="#" class="inline-block py-3 px-4 hover:text-[#E2F89C] transition">Social & Lifestyle</a></li>
                     <li><a href="#" class="inline-block py-3 px-4 hover:text-[#E2F89C] transition">Health & Wellness</a></li>
@@ -61,14 +62,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- ส่วนแสดงข่าวสาร (Latest Stories) -->
                 <div class="lg:col-span-2 space-y-8">
-                    <h2 class="genz-title text-lg font-bold uppercase tracking-wider text-[#FFE3F1] border-b border-[#FFE3F1]/20 pb-2">Latest Stories</h2>
+                    <h2 class="handwriting-title text-xl font-bold uppercase tracking-wider text-[#FFE3F1] border-b border-[#FFE3F1]/20 pb-2">Latest Stories</h2>
                     <div id="news-feed" class="space-y-6">
-                        <!-- ตัวอย่างการ์ดข่าว สีเขียวพาสเทลอ่อนลง -->
-                        <article class="bg-[#E9F9B5] p-6 border-2 border-[#9B8AFB]/40 rounded-xl flex flex-col md:flex-row gap-6 shadow-md text-[#503E93]">
-                            <img src="/images/placeholder.jpg" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded-lg">
+                        <!-- การ์ดข่าวสีเขียวพาสเทลอ่อน -->
+                        <article class="bg-[#E9F9B5] p-6 border-2 border-[#9B8AFB]/40 rounded-2xl flex flex-col md:flex-row gap-6 shadow-md text-[#503E93]">
+                            <img src="/images/placeholder.jpg" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded-xl">
                             <div>
-                                <span class="text-xs font-extrabold text-[#F26A44] uppercase tracking-wider">Social & Lifestyle</span>
-                                <h3 class="genz-title text-xl font-bold mt-1">Next-Gen Trends Shifting Digital Workflows in 2026</h3>
+                                <span class="text-xs font-bold text-[#F26A44] uppercase tracking-wider">Social & Lifestyle</span>
+                                <h3 class="handwriting-title text-2xl font-bold mt-1">Next-Gen Trends Shifting Digital Workflows in 2026</h3>
                                 <p class="text-opacity-90 text-sm mt-2 font-medium">Explore how modern creators and digital platforms are adapting to rapid technological transformations.</p>
                                 <span class="text-xs opacity-70 mt-4 block font-semibold">September 25, 2026</span>
                             </div>
@@ -76,10 +77,10 @@
                     </div>
                 </div>
 
-                <!-- ส่วนแถบด้านข้าง (Sidebar - Most Viewed) สีชมพูพาสเทลอ่อน -->
+                <!-- ส่วนแถบด้านข้าง (Sidebar - Most Viewed) สีชมพูพาสเทล -->
                 <aside class="space-y-8">
-                    <div class="bg-[#FFB5E8] p-6 border-2 border-[#9B8AFB]/40 rounded-xl shadow-md text-[#6E1C48]">
-                        <h3 class="genz-title text-sm font-extrabold uppercase tracking-wider mb-4 border-b border-[#6E1C48]/20 pb-2">Most Viewed</h3>
+                    <div class="bg-[#FFB5E8] p-6 border-2 border-[#9B8AFB]/40 rounded-2xl shadow-md text-[#6E1C48]">
+                        <h3 class="handwriting-title text-base font-bold uppercase tracking-wider mb-4 border-b border-[#6E1C48]/20 pb-2">Most Viewed</h3>
                         <ol class="space-y-4 text-sm font-semibold list-decimal list-inside">
                             <li class="hover:text-white cursor-pointer transition">Global digital spaces and new platform features</li>
                             <li class="hover:text-white cursor-pointer transition">Modern minimalist lifestyle trends among teens</li>
